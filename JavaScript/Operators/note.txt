@@ -1,0 +1,16 @@
+Operators in programming are special symbols or keywords that are used to perform operations on variables and values.
+They are fundamental for tasks like arithmetic, comparison, assignment, and logical operations.
+
+Common types of operators in JavaScript:
+1. Arithmetic Operators: +, -, *, /, %, ++, --
+2. Assignment Operators: =, +=, -=, *=, /=
+3. Comparison Operators: ==, ===, !=, !==, >, <, >=, <=
+4. Logical Operators: &&, ||, !
+5. Bitwise Operators: &, |, ^, ~, <<, >>
+6. Ternary Operator: condition ? expr1 : expr2
+
+Example:
+let a = 5;
+let b = 2;
+let sum = a + b; // '+' is an arithmetic operator
+let isEqual = (a == b); // '==' is a comparison operator

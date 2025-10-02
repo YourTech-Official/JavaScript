@@ -1,0 +1,55 @@
+Q1.What is conditional Statement ?
+Ans - Conditional statements are instructions in programming that 
+let you make decisions based on certain conditions.
+
+Example (Real Life): If it is raining, take an umbrella.
+Otherwise, you don’t need an umbrella
+
+Q2. Types of Conditional Statements in JavaScript:
+1. **if statement**
+   - Checks a condition and runs code if true.
+   - Example:  
+     ```javascript
+     if (age > 18) {
+       console.log("You can vote.");
+     }
+     ```
+
+2. **if...else statement**
+   - Runs one block if true, another if false.
+   - Example:  
+     ```javascript
+     if (isRaining) {
+       console.log("Take an umbrella.");
+     } else {
+       console.log("No umbrella needed.");
+     }
+     ```
+3. **if...else if...else statement**
+   - Checks multiple conditions.
+   - Example:  
+     ```javascript
+     if (score >= 90) {
+       console.log("Grade A");
+     } else if (score >= 80) {
+       console.log("Grade B");
+     } else {
+       console.log("Grade C");
+     }
+     ```
+
+4. **switch statement**
+   - Checks many possible values.
+   - Example:  
+     ```javascript
+     switch (day) {
+       case "Monday":
+         console.log("Start of the week");
+         break;
+       case "Friday":
+         console.log("End of the week");
+         break;
+       default:
+         console.log("Midweek");
+     }
+     ```

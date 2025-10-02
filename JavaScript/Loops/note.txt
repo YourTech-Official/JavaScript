@@ -1,0 +1,186 @@
+Q1 - What is loop ?
+Ans - 
+     A loop is a programming construct that repeats a block of code multiple times until a specified condition is met.
+
+Types of Loops in Js
+
+1. for loop
+Use: Repeat code a specific number of times.
+
+Example:
+'''
+for (let i = 0; i < 3; i++) {
+  console.log(i); // prints 0, 1, 2
+}
+
+'''
+
+2. while loop
+Use: Repeat code while a condition is true.
+
+Example:
+'''
+let i = 0;
+while (i < 3) {
+  console.log(i); // prints 0, 1, 2
+  i++;
+}
+'''
+
+3. do...while loop
+Use: Like while, but always runs the code at least once.
+
+Example:
+'''
+let i = 0;
+do {
+  console.log(i); // prints 0, 1, 2
+  i++;
+} while (i < 3);
+'''
+
+4. for...of loop
+Use: Loop over values in an array or iterable.
+Example:
+'''
+const fruits = ['apple', 'banana', 'cherry'];
+for (const fruit of fruits) {
+  console.log(fruit); // prints 'apple', 'banana', 'cherry'
+}
+'''
+
+5. for...in loop
+Use: Loop over property names (keys) in an object.
+
+Example:
+'''
+const person = { name: 'Alice', age: 25 };
+for (const key in person) {
+  console.log(key, person[key]); // prints 'name Alice', 'age 25'
+}
+'''
+
+6. forEach loop
+Use: Execute a function for each array element (array method).
+
+Example:
+'''
+const fruits = ['apple', 'banana', 'cherry'];
+fruits.forEach((fruit, index) => {
+  console.log(index, fruit); // prints '0 apple', '1 banana', '2 cherry'
+});
+'''
+
+Note: forEach cannot use break/continue, use for...of if you need loop control.
+
+Loop Control Statements
+
+1. break - Exit the loop immediately
+'''
+for (let i = 0; i < 10; i++) {
+  if (i === 5) break;
+  console.log(i); // prints 0, 1, 2, 3, 4
+}
+'''
+
+2. continue - Skip current iteration, move to next
+'''
+for (let i = 0; i < 5; i++) {
+  if (i === 2) continue;
+  console.log(i); // prints 0, 1, 3, 4
+}
+'''
+
+3. return - Exit function (also exits loop)
+'''
+function findNumber(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) return i;
+  }
+  return -1;
+}
+'''
+
+Loop Workflows & Best Practices
+
+1. Initialization → Condition Check → Execute Code → Update → Repeat
+2. Always ensure loop conditions will eventually become false (avoid infinite loops)
+3. Use appropriate loop type for the task:
+   - for: Known iterations
+   - while: Unknown iterations, condition-based
+   - for...of: Array/iterable values
+   - for...in: Object properties
+
+Performance Tips
+
+1. Cache array length in for loops:
+'''
+const arr = [1, 2, 3, 4, 5];
+for (let i = 0, len = arr.length; i < len; i++) {
+  console.log(arr[i]);
+}
+'''
+
+2. Use for...of for arrays (faster than for...in):
+'''
+// Good
+for (const item of array) { }
+
+// Avoid for arrays
+for (const index in array) { }
+'''
+
+Nested Loops
+
+'''
+// 2D array processing
+const matrix = [[1, 2], [3, 4]];
+for (let i = 0; i < matrix.length; i++) {
+  for (let j = 0; j < matrix[i].length; j++) {
+    console.log(matrix[i][j]);
+  }
+}
+'''
+
+Common Loop Patterns
+
+1. Array Processing:
+'''
+const numbers = [1, 2, 3, 4, 5];
+let sum = 0;
+for (const num of numbers) {
+  sum += num;
+}
+'''
+
+2. Object Iteration:
+'''
+const obj = { a: 1, b: 2, c: 3 };
+for (const [key, value] of Object.entries(obj)) {
+  console.log(`${key}: ${value}`);
+}
+'''
+
+3. Conditional Processing:
+'''
+const items = ['apple', 'banana', 'cherry'];
+for (let i = 0; i < items.length; i++) {
+  if (items[i].startsWith('a')) {
+    console.log('Found:', items[i]);
+    break;
+  }
+}
+'''
+
+Loop vs Array Methods
+
+'''
+// Traditional loop
+const doubled = [];
+for (let i = 0; i < numbers.length; i++) {
+  doubled.push(numbers[i] * 2);
+}
+
+// Modern approach
+const doubled = numbers.map(num => num * 2);
+'''
