@@ -1,0 +1,129 @@
+Q. What is a Function?
+Ans - A Function is a block of code designed to perform a perticular task.
+      it is executed when it is invoked or called.
+
+Type of Functions - 
+1. Function Declaration
+   - Defined using 'function' keyword
+   - Hoisted (can be called before declaration)
+   - Example: function myFunc() { }
+
+2. Function Expression
+   - Function assigned to a variable
+   - Not hoisted
+   - Example: const myFunc = function() { }
+
+3. Arrow Function
+   - Shorter syntax using =>
+   - No 'this' binding
+   - Example: const myFunc = () => { }
+
+4. Anonymous Function
+   - Function without a name
+   - Used as callback or immediately invoked
+   - Example: function() { }
+
+5. IIFE (Immediately Invoked Function Expression)
+   - Function that runs immediately after creation
+   - Example: (function() { })();
+
+Function Syntax:
+- function functionName(parameters) {
+    // code block
+    return value; // optional
+  }
+
+Parameters & Arguments:
+- Parameters: variables in function definition
+- Arguments: actual values passed to function
+- Default parameters: function greet(name = "World") { }
+- Rest parameters: function sum(...numbers) { }
+
+Return Statement:
+- Returns value from function
+- If no return, function returns undefined
+- Example: return result;
+
+Function Scope:
+- Local scope: variables inside function
+- Global scope: variables outside all functions
+- Block scope: let/const in { } blocks
+
+Callback Functions:
+- Function passed as argument to another function
+- Example: array.map(function(item) { return item * 2; })
+
+Higher-Order Functions:
+- Functions that take other functions as arguments
+- Or return functions as result
+- Example: map(), filter(), reduce()
+
+Function Methods:
+- call(): calls function with specific 'this'
+- apply(): like call() but takes array of arguments
+- bind(): creates new function with bound 'this'
+
+CODE EXAMPLES:
+
+1. Basic Function:
+function greet(name) {
+    return "Hello " + name;
+}
+console.log(greet("John")); // Hello John
+
+2. Arrow Function:
+const add = (a, b) => a + b;
+console.log(add(5, 3)); // 8
+
+3. Function with Default Parameter:
+function multiply(a, b = 1) {
+    return a * b;
+}
+console.log(multiply(5)); // 5
+console.log(multiply(5, 2)); // 10
+
+4. Callback Function:
+const numbers = [1, 2, 3];
+const doubled = numbers.map(num => num * 2);
+console.log(doubled); // [2, 4, 6]
+
+5. IIFE:
+(function() {
+    console.log("I run immediately!");
+})();
+
+6. Function Expression:
+const sayHi = function(name) {
+    return `Hi ${name}!`;
+};
+console.log(sayHi("Alice")); // Hi Alice!
+
+SCOPE CLARIFICATION:
+
+// const is block-scoped, but this works because:
+// sayHi is declared in global scope, not inside a block
+
+// This WON'T work (block scope):
+if (true) {
+    const blockFunc = function() {
+        return "I'm in block";
+    };
+}
+// console.log(blockFunc()); // Error: blockFunc is not defined
+
+// This WILL work (global scope):
+const globalFunc = function() {
+    return "I'm global";
+};
+console.log(globalFunc()); // I'm global
+
+// Function inside function (local scope):
+function outer() {
+    const inner = function() {
+        return "I'm inner";
+    };
+    return inner(); // Can access here
+}
+console.log(outer()); // I'm inner
+// console.log(inner()); // Error: inner is not defined
+
