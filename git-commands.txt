@@ -1,0 +1,27 @@
+GIT COMMANDS - Quick Reference
+
+Basic Commands:
+- git status          // Check current status
+- git add .           // Add all files
+- git add filename    // Add specific file
+- git commit -m "msg" // Commit with message
+- git push origin main // Push to GitHub
+
+Sync with Remote:
+- git pull origin main // Get latest changes
+- git push origin main // Upload changes
+
+Move/Remove Files:
+- move folder destination     // Move folder (Windows)
+- git rm -r foldername       // Remove from git
+- git add newfolder/         // Add moved folder
+
+Common Workflow:
+1. git pull origin main
+2. git add .
+3. git commit -m "description"
+4. git push origin main
+
+Fix Push Errors:
+- git pull origin main       // If behind remote
+- git push --force origin main // Force overwrite (careful!)
