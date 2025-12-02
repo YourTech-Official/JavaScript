@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+      .div {
+        background-color: pink;
+        color: black;
+        border: 2px solid yellow;
+        width: 300px;
+        height: 300px;
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>hello world</h1>
+    <!-- <button onclick="changeToLight()">light</button>
+    <button onclick="changeToDark()">dark</button> -->
+
+    <button class="l">light</button>
+    <button class="d">dark</button>
+
+    <!-- <div class="div" onmouseover="nextBg()" onmouseleave="prevBg()">
+      Lorem ipsum dolor sit amet.
+    </div> -->
+
+    <div class="div">Lorem ipsum dolor sit amet.</div>
+
+    <script>
+      let light = document.querySelector(".l");
+      let dark = document.querySelector(".d");
+
+      let changeToLight = () => {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+      };
+
+      let changeToDark = () => {
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+      };
+
+      dark.addEventListener("click", changeToDark);
+      light.addEventListener("click", changeToLight);
+
+      // let prevBg = () =>{
+      //     let div = document.querySelector('.div');
+
+      //     div.style.backgroundColor = 'pink';
+      //     div.style.color = 'black';
+      // }
+
+      // let nextBg = () =>{
+      //     let div = document.querySelector('.div');
+
+      //     div.style.backgroundColor = 'lightblue';
+      //     div.style.color = 'red';
+      // }
+
+      let div = document.querySelector(".div");
+
+      div.addEventListener("mouseover", () => {
+        div.style.backgroundColor = "blue";
+        div.style.color = "white";
+      });
+
+      div.addEventListener("mouseleave", () => {
+        div.style.backgroundColor = "pink";
+        div.style.color = "black";
+      });
+    </script>
+  </body>
+</html>
