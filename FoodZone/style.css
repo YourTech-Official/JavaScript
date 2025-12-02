@@ -1,0 +1,44 @@
+button{
+    font-weight: bold !important;
+}
+input{
+    width: 20rem;
+    background-color: rgb(70, 44, 44);
+    border: none;
+    padding: 5px;
+    color: white;
+    border-radius: 10px;
+}
+input:focus{
+    outline: none;
+}
+
+.food{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem;
+}
+.mealImg{
+    width: 220px;
+    border-radius: 10px;
+
+}
+.mealContainer{
+    text-align: center;
+}
+
+body::-webkit-scrollbar{
+display: none;
+}
+h5{
+    margin: 10px;
+}
+.searchContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
