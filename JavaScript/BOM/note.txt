@@ -1,0 +1,1 @@
+BOM - The BOM (Browser Object Model) is a collection of Objects that allow JavaScript to interact with the browser.

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Clock</title>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282c34;
+            color: #fff;
+            font-family: 'Arial', Arial, Helvetica, sans-serif;
+        }
+        body::-webkit-scrollbar{
+            display: none;
+        }
+        .clock-container{
+            text-align: center;
+            font-size: 48px;
+            border: 2px solid white;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="clock-container">
+        <h1 class="clock">00:00:00</h1>
+    </div>
+    <audio src="./sound.mp3" preload="auto"></audio>
+
+    <script src="index.js"></script>
+</body>
+</html>
