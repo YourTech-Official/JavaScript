@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+
+    <style>
+      body {
+        background-color: black;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="cl">
+      hello world <span>Adi !</span>
+      <li>Cs</li>
+    </h1>
+
+    <script>
+      // DOM element properties -
+
+      // textContent : gets/sets the text content (no html)
+      // innerHTML : gets/sets the HTML content (with tags).
+      // innerText : gets/sets visible text (ignores hidden).
+      // style : Accesses inline styles
+      // className : gets/sets class name(s).
+      // tagName : Returns the element's tag name.
+      // src : gets/sets image source.
+
+      let elem = document.querySelector("h1");
+
+      //   check output in console
+
+      //output - h1 and all tags present inside h1,
+      // every tag's content print in a new line
+      console.log("text content : ", elem.textContent);
+      //output - h1 contents including tag name and their content
+      console.log("innerHTML : ", elem.innerHTML);
+      //output - h1 and all tags present inside h1,
+      // inline elements are print in a same line but line/non-inline elements print in a new line
+      console.log("innerText : ", elem.innerText);
+      console.log("className : ", elem.className);
+
+    // these are treat as inline style
+      elem.style.color = "blue";
+      elem.style.backgroundColor = "gray";
+      elem.textContent = "Adils";
+
+      elem.className = 'ch';//this will change class name
+    </script>
+  </body>
+</html>

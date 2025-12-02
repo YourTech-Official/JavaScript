@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+
+    <style>
+      body {
+        background-color: black;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="h1" class="cl">hello</h1>
+    <h1 class="cl">hello 2</h1>
+
+    <script>
+      // Accessing html elements
+
+      // method 1 - getElementById
+      // method 2 - getElementsByTagName
+      // method 3 - getElementsByClassName
+
+      //   let id = document.getElementById("h1");
+
+      //   let tag = document.getElementsByTagName("h1");
+
+      //   let Class = document.getElementsByClassName("cl");
+
+      // DOM element properties -
+
+      // textContent : gets/sets the text content (no html)
+      // innerHTML : gets/sets the HTML content (with tags).
+      // innerText : gets/sets visible text (ignores hidden).
+      // style : Accesses inline styles
+      // className : gets/sets class name(s).
+      // tagName : Returns the element's tag name.
+      // src : gets/sets image source.
+
+      let qsAll = document.querySelectorAll(".cl"); //select all element who's class name is cl
+      let qSelector = document.querySelector(".cl"); //for id "#h1", for tag "tagname"
+    </script>
+  </body>
+</html>

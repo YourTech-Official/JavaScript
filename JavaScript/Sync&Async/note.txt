@@ -1,0 +1,10 @@
+
+Synchronous : 
+
+Defination : In synchronous execution, code runs line by line , and each line must finish executing before
+ the next one starts. This can lead to delays if a task takes a long time(e.g., fetching data).
+
+Asynchronous : 
+
+Defination : In asynchronous execution, certain operations can be initiated and will run in the background,
+allowing the rest of the code to continue executing without waiting for the task to finish.

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Changer</title>
+
+    <style>
+      body {
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+      }
+
+      .image_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .image_container img {
+        height: 300px;
+        border: 2px solid white;
+        border-radius: 10px;
+      }
+      .image_container h2 {
+        background-color: yellow;
+        color: black;
+        padding: 5px;
+        border: 1px solid white;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body
+    background="https://cdn.pixabay.com/photo/2014/10/15/19/20/notre-dame-490222_1280.jpg"
+  >
+    <h1>Image Changer</h1>
+    <div class="image_container">
+      <img
+        src="https://media.istockphoto.com/id/1347665170/photo/london-at-sunset.jpg?s=1024x1024&w=is&k=20&c=ogVKCS26t23fSvgCO77CC_6mhtxMDk2cmBOUQ9VamYo="
+        alt=""
+      />
+      <h2>London</h2>
+
+      <script>
+        let img = document.querySelector("img");
+        let h2 = document.querySelector("h2");
+        let prevSrc = img.src;
+        let prevText = h2.innerText;
+        let image =
+          "https://cdn.pixabay.com/photo/2014/10/15/19/20/notre-dame-490222_1280.jpg";
+
+        img.addEventListener("mouseover", () => {
+          img.src = image;
+          h2.innerText = "Paris";
+        });
+
+        img.addEventListener("mouseleave", () => {
+          img.src = prevSrc;
+          h2.innerText = prevText;
+        });
+      </script>
+    </div>
+  </body>
+</html>

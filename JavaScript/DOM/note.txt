@@ -1,0 +1,17 @@
+DOM - Document Object Model
+The DOM is a programming interface for HTML and XML documents. It represents the structure of a webpage as a tree of objects,
+ allowing programming languages (like js) to access, modify, and manipulate the document's content, structure, and style.
+
+ 
+Inline Elements:
+Flow with content: Inline elements do not start on a new line and flow within the surrounding text or other inline content.
+Occupy content width: They only take up as much horizontal space as their content requires, without extending to the full width of their parent container.
+Limited styling control: Properties like height, margin-top, margin-bottom, and vertical padding often have limited or no effect on their layout.
+Examples: <a>, <span>, <em>, <strong>, <img>, <input>, <button>.
+
+Block-Level Elements (Non-Inline Elements):
+Start on a new line: Block-level elements always begin on a new line, effectively creating a "block" of content.
+Occupy full width: By default, they take up the entire available width of their parent container, pushing any subsequent content to a new line.
+Full styling control: They allow full control over dimensions and spacing using height, width, margin, and padding properties.
+Can contain other elements: Block-level elements can contain both inline and other block-level elements.
+Examples: <div>, <p>, <h1> to <h6>, <ul>, <ol>, <li>, <header>, <footer>, <section>.

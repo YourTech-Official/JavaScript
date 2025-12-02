@@ -1,0 +1,58 @@
+JavaScript 'this' Context - Method Calling
+
+The Problem:
+When you extract a method from an object and call it without the object context, 'this' loses its reference to the original object.
+
+Method 1: Direct Call (✅ Works)
+company.calculateTotalSalary()
+- Calls method directly on object
+- 'this' = company object
+- Works correctly
+
+Method 2: Extracted Call (❌ Breaks)
+const func = company.calculateTotalSalary;
+func()
+- Extracts method from object first
+- Calls without object context
+- 'this' = undefined
+- Error: "Cannot read properties of undefined"
+
+Solution: Use .call() to restore context
+data.call(company)
+- Tells the function which object 'this' should be
+- 'this' = company object again
+- Works correctly
+
+Simple Analogy:
+Method 1: Person introduces themselves → "Hi, I'm John" ✅
+Method 2: Take away their memory, ask to introduce → "Hi, I'm... who am I?" ❌
+
+Key Point: The difference is CONTEXT - Method 1 keeps it, Method 2 loses it.
+
+Code Example 1: Without Object Context (❌ Breaks)
+const person = {
+  name: "John",
+  greet: function() {
+    return `Hello, I'm ${this.name}`;
+  }
+};
+
+const func = person.greet;  // Extract method
+func();  // Error: Cannot read properties of undefined (reading 'name')
+// Because 'this' = undefined
+
+Code Example 2: With Object Context (✅ Works)
+const person = {
+  name: "John",
+  greet: function() {
+    return `Hello, I'm ${this.name}`;
+  }
+};
+
+// Method 1: Direct call
+person.greet();  // "Hello, I'm John" ✅
+
+// Method 2: Using .call() to restore context
+const func = person.greet;
+func.call(person);  // "Hello, I'm John" ✅
+// Because 'this' = person object

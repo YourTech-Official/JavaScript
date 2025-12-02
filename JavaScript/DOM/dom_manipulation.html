@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Dom Manipulation</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="cl">Hello world</h1>
+    </div>
+
+    <script>
+      // createElement(tagName) : create a new element.
+
+      // setAttribute(attribute, value) : sets an attribute's value
+      // getAttribute(attribute) : gets an attribute's value
+      // removeAttribute(attribute) : removes an  attribute
+
+      const body = document.querySelector("body");
+      body.style.backgroundColor = "black";
+      body.style.color = "white";
+      
+      //     {
+      //   let h2 = document.createElement('h2');
+      //   h2.innerText = 'This h2 from js';
+      //   h2.setAttribute("class", 'h2cl');
+      //   h2.setAttribute('id', 'h2id');
+      //   console.log(h2, h2.getAttribute('class'));
+      //   h2.removeAttribute('class');
+      //   console.log(h2);
+      //     }
+
+      let container = document.querySelector(".container");
+      container.style.backgroundColor = "lightgray";
+      let h2 = document.createElement("h2");
+      h2.innerText = "h2 from js";
+
+      //   container.append(h2); //adds at the end of node (inside). container ->then h1 -> then h2
+      // container.prepend(h2);//adds at the start of node (inside). container ->then h2 -> then h1
+      // container.before(h2);//adds before the node (outside). h2 added before container in same level
+    //   container.after(h2); //adds after the node (outside). h2 added after container in same level
+    //   container.remove(h2); //remove h2
+    </script>
+  </body>
+</html>
